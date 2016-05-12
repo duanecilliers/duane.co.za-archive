@@ -19,3 +19,7 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+sass:
+  load_paths:
+    - bower_components
