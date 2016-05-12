@@ -1,0 +1,7 @@
+<section id="projects">
+  <ul class="mosaic">
+    {% for item in site.data.projects %}
+      <li><a href="{{ item.url }}"><img src="{{ item.img_src }}" alt="{{ item.img_alt }}"></a></li>
+    {% endfor %}
+  </ul>
+</section>
