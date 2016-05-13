@@ -139,11 +139,17 @@ pre {
 .content {
   @extend %clearfix;
   width: 90%;
+  margin-top: $spacing-unit * 2;
   margin-left: auto;
   margin-right: auto;
+
+  section {
+    margin-bottom: $spacing-unit * 2;
+    > h2 {
+      text-align: center;
+    }
+  }
 }
-
-
 
 /**
  * Clearfix
