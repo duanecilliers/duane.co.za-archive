@@ -15,6 +15,6 @@
     "tests"
   ],
   "devDependencies": {
-
+    "normalize-css": "^4.1.1"
   }
 }
