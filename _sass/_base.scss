@@ -27,6 +27,10 @@ body {
   @media screen and (min-width: $mq-tablet) {
     font-size: $base-font-size;
   }
+
+  @media screen and (min-width: $mq-desktop) {
+    font-size: $base-font-size + 2;
+  }
 }
 
 
