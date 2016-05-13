@@ -1,6 +1,56 @@
+.social {
+  list-style: none;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 $spacing-unit / 4;
+
+    a {
+      border: 2px solid #000;
+      display: block;
+      color: #fff;
+      background-color: #000;
+      padding: 0;
+      -webkit-border-radius: 90%;
+      border-radius: 90%;
+      width: 40px;
+      height: 40px;
+      line-height: 35px;
+      text-align: center;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+
+      &.fa {
+        font-size: 20px;
+      }
+
+      &:hover,
+      &:focus {
+        color: #000;
+        background-color: #fff;
+      }
+    }
+  }
+
+  @media screen and (min-width: $mq-tablet) {
+    li a {
+      width: 50px;
+      height: 50px;
+      line-height: 45px;
+    }
+  }
+}
+
 #bio {
   > div {
     @extend %valign;
+
+    .social {
+      margin-top: $spacing-unit;
+    }
 
     @media screen and (max-width: $mq-tablet) {
       text-align: center;
