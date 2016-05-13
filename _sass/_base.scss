@@ -147,12 +147,13 @@ pre {
 .content {
   @extend %clearfix;
   width: 90%;
-  margin-top: $spacing-unit;
-  margin-left: auto;
-  margin-right: auto;
+  margin: $spacing-unit auto;
 
   section {
     margin-bottom: $spacing-unit * 2;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
     > h2 {
       text-align: center;
       font-family: $heading-font-family-alt;
@@ -162,7 +163,7 @@ pre {
   }
 
   @media screen and (min-width: $mq-tablet) {
-    margin-top: $spacing-unit * 2;
+    margin: $spacing-unit * 2 auto;
   }
 }
 
