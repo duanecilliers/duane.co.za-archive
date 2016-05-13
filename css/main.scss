@@ -5,12 +5,12 @@
 
 // Our variables
 $base-font-family        : "PT Serif", serif;
-$base-font-size          : 16px;
+$base-font-size          : 20px;
 $base-font-weight        : 400;
 $heading-font-family     : "Roboto", Helvetica, Arial, sans-serif;
 $heading-font-family-alt : "Raleway", Helvetica, Arial, sans-serif;
 $small-font-size         : $base-font-size * 0.875;
-$base-line-height        : 1.5;
+$base-line-height        : 1.7;
 
 $spacing-unit            : 30px;
 
@@ -27,4 +27,4 @@ $mq-tablet               : screen and (min-width: 768px);
 $mq-desktop              : screen and (min-width: 998px);
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "base", "cards";
+@import "normalize", "base", "cards";
