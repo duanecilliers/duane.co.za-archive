@@ -25,6 +25,10 @@
     width: 83%;
     padding-left: $spacing-unit;
 
+    a {
+      color: $grey-color-darkest;
+    }
+
     p {
       font-style: italic;
       &:before,
