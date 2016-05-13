@@ -162,26 +162,6 @@ pre {
 }
 
 /**
- * Components
- */
-#bio {
-  > div {
-    display: table;
-
-    .info {
-      width: 70%;
-      padding-left: $spacing-unit;
-    }
-
-    img,
-    .info {
-      display: table-cell;
-      vertical-align: middle;
-    }
-  }
-}
-
-/**
  * Clearfix
  */
 %clearfix {

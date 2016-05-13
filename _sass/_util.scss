@@ -1,0 +1,16 @@
+/**
+ * Vertical Align
+ */
+%valign {
+  display: table;
+
+  > *,
+  .valign {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.valign-wrapper {
+  @extend %valign;
+}

@@ -27,4 +27,12 @@ $mq-tablet               : 768px;
 $mq-desktop              : 998px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "normalize", "base", "cards", "media", "mosaic";
+@import
+  "normalize",
+  "font-awesome/font-awesome",
+  "util",
+  "base",
+  "cards",
+  "media",
+  "mosaic",
+  "components";

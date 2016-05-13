@@ -1,0 +1,54 @@
+#bio {
+  > div {
+    display: table;
+
+    .info {
+      width: 70%;
+      padding-left: $spacing-unit;
+    }
+
+    img,
+    .info {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+#testimonial {
+  img {
+    @extend %img-rounded;
+    @extend %img-framed;
+    border-width: 3px;
+  }
+  blockquote {
+    width: 83%;
+    padding-left: $spacing-unit;
+
+    p {
+      font-style: italic;
+      &:before,
+      &:after {
+        @include fa-icon();
+        color: $grey-color-darkest;
+      }
+      &:before {
+        content: $fa-var-quote-left;
+        padding-right: $spacing-unit / 3;
+      }
+      &:after {
+        content: $fa-var-quote-right;
+        padding-left: $spacing-unit / 3;
+      }
+    }
+
+    footer {
+      font-size: .9em;
+      cite {
+        font-family: $heading-font-family;
+        font-style: normal;
+        color: $grey-color-darkest;
+      }
+    }
+  }
+}

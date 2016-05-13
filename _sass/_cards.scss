@@ -5,6 +5,6 @@
 }
 
 #bio > div,
-#testimonial blockquote {
+#testimonial .valign-wrapper {
   @extend %card;
 }
