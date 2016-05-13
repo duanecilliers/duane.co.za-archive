@@ -1,16 +1,20 @@
 /**
  * Vertical Align
  */
-%valign {
-  display: table;
 
-  > *,
-  .valign {
-    display: table-cell;
-    vertical-align: middle;
+@media screen and (min-width: $mq-tablet) {
+  %valign {
+    display: table;
+
+    > *,
+    .valign {
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
-}
 
-.valign-wrapper {
-  @extend %valign;
+  .valign-wrapper {
+    @extend %valign;
+  }
+
 }

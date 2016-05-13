@@ -1,18 +1,21 @@
 #bio {
   > div {
-    // display: table;
     @extend %valign;
 
-    .info {
-      width: 70%;
-      padding-left: $spacing-unit;
+    @media screen and (max-width: $mq-tablet) {
+      text-align: center;
+      img {
+        max-width: 60%;
+        margin-bottom: $spacing-unit;
+      }
     }
 
-    // img,
-    // .info {
-    //   display: table-cell;
-    //   vertical-align: middle;
-    // }
+    @media screen and (min-width: $mq-tablet) {
+      .info {
+        width: 70%;
+        padding-left: $spacing-unit;
+      }
+    }
   }
 }
 
