@@ -1,6 +1,7 @@
 .mosaic {
   position: relative;
   margin-top: 70px;
+  margin-left: 0;
   @extend %clearfix;
 
   .tile {
