@@ -1,0 +1,10 @@
+%card {
+  background: white;
+  border: 1px solid $grey-color-dark;
+  padding: $spacing-unit + 20;
+}
+
+#bio > div,
+#testimonial blockquote {
+  @extend %card;
+}

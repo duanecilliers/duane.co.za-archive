@@ -4,23 +4,27 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Roboto", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-font-family        : "PT Serif", serif;
+$base-font-size          : 16px;
+$base-font-weight        : 400;
+$heading-font-family     : "Roboto", Helvetica, Arial, sans-serif;
+$heading-font-family-alt : "Raleway", Helvetica, Arial, sans-serif;
+$small-font-size         : $base-font-size * 0.875;
+$base-line-height        : 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit            : 30px;
 
-$text-color:       #111;
-$background-color: #ebebeb;
-$brand-color:      #2a7ae2;
+$text-color              : #111;
+$background-color        : #ebebeb;
+$brand-color             : #2a7ae2;
 
-$grey-color:       $background-color;
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color              : $background-color;
+$grey-color-dark         : darken($grey-color, 5%);
+$grey-color-darker       : darken($grey-color, 15%);
+$grey-color-darkest      : darken($grey-color, 25%);
 
-$mq-tablet:        screen and (min-width: 768px);
-$mq-desktop:       screen and (min-width: 998px);
+$mq-tablet               : screen and (min-width: 768px);
+$mq-desktop              : screen and (min-width: 998px);
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "base";
+@import "base", "cards";

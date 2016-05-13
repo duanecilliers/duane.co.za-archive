@@ -17,6 +17,8 @@ body {
   background-color: $background-color;
   background-image: url('../images/bg-shattered.jpg');
   background-repeat: repeat;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
 }
 
 
@@ -76,6 +78,8 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
+  font-family: $heading-font-family;
+  font-weight: bold;
 }
 
 
@@ -147,6 +151,9 @@ pre {
     margin-bottom: $spacing-unit * 2;
     > h2 {
       text-align: center;
+      font-family: $heading-font-family-alt;
+      font-weight: 400;
+      margin-bottom: $spacing-unit * 1.5;
     }
   }
 }
