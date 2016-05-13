@@ -22,5 +22,9 @@
   "pinterest": {
     "url": "https://za.pinterest.com/duanecilliers/",
     "icon": "fa-pinterest"
+  },
+  "instagram": {
+    "url": "https://www.instagram.com/dcilliers/",
+    "icon": "fa-instagram"
   }
 }
