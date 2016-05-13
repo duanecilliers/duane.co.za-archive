@@ -26,8 +26,6 @@
     border-width: 3px;
   }
   blockquote {
-    width: 83%;
-    padding-left: $spacing-unit;
 
     a {
       color: $grey-color-darkest;
@@ -57,6 +55,27 @@
         font-style: normal;
         color: $grey-color-darkest;
       }
+    }
+  }
+
+  @media screen and (max-width: $mq-tablet) {
+    text-align: center;
+
+    a {
+      display: block;
+    }
+
+    img {
+      margin-bottom: $spacing-unit;
+      max-width: 50%;
+    }
+  }
+
+  @media screen and (min-width: $mq-tablet) {
+
+    blockquote {
+      width: 83%;
+      padding-left: $spacing-unit;
     }
   }
 }
