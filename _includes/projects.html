@@ -4,8 +4,15 @@
 
   <ul class="mosaic">
     {% for project in site.data.projects %}
-      <li>
-        <a href="{{ project[1].url }}"><img src="{{ project[1].img_src }}" alt="{{ project[1].img_alt }}"></a>
+      <li class="tile">
+        <a href="{{ project[1].url }}">
+          <figure>
+            <img src="{{ project[1].img_src }}" alt="{{ project[1].img_alt }}">
+            <figcaption>
+              <span>{{ project[1].name }}</span>
+            </figcaption>
+          </figure>
+        </a>
       </li>
     {% endfor %}
   </ul>

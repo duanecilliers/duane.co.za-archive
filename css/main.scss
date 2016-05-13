@@ -23,8 +23,8 @@ $grey-color-dark         : darken($grey-color, 5%);
 $grey-color-darker       : darken($grey-color, 15%);
 $grey-color-darkest      : darken($grey-color, 25%);
 
-$mq-tablet               : screen and (min-width: 768px);
-$mq-desktop              : screen and (min-width: 998px);
+$mq-tablet               : 768px;
+$mq-desktop              : 998px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "normalize", "base", "cards", "media";
+@import "normalize", "base", "cards", "media", "mosaic";
