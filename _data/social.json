@@ -18,5 +18,9 @@
   "stack-overflow": {
     "url": "http://wordpress.stackexchange.com/users/13077/duane",
     "icon": "fa-stack-overflow"
+  },
+  "pinterest": {
+    "url": "https://za.pinterest.com/duanecilliers/",
+    "icon": "fa-pinterest"
   }
 }
