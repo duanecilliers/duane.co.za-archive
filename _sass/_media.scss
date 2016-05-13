@@ -1,0 +1,11 @@
+%img-rounded {
+  border-radius: 90%;
+}
+
+%img-framed {
+  border: 6px solid $grey-color;
+}
+
+#bio img {
+  @extend %img-rounded, %img-framed;
+}

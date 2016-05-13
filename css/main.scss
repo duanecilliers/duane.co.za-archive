@@ -27,4 +27,4 @@ $mq-tablet               : screen and (min-width: 768px);
 $mq-desktop              : screen and (min-width: 998px);
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "normalize", "base", "cards";
+@import "normalize", "base", "cards", "media";
