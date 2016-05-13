@@ -16,12 +16,11 @@ $text-color:       #111;
 $background-color: #ebebeb;
 $brand-color:      #2a7ae2;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
+$grey-color:       $background-color;
 $grey-color-dark:  darken($grey-color, 25%);
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$mq-tablet:        screen and (min-width: 768px);
+$mq-desktop:       screen and (min-width: 998px);
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "base";
