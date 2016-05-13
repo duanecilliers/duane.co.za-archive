@@ -20,9 +20,13 @@ body {
   background-image: url('../images/bg-shattered.jpg');
   background-repeat: repeat;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: $base-font-size - 2;
   line-height: $base-line-height;
   color: $text-color;
+
+  @media screen and (min-width: $mq-tablet) {
+    font-size: $base-font-size;
+  }
 }
 
 
