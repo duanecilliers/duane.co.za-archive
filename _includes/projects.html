@@ -3,9 +3,7 @@
     <!-- {{ site.data.projects }} -->
     {% for project in site.data.projects %}
       <li>
-        {{ project }}
-        {{ project.img_src }}
-        <!-- <a href="{{ item[url] }}"><img src="{{ item[img_src] }}" alt="{{ item[img_alt] }}"></a> -->
+        <a href="{{ project[1].url }}"><img src="{{ project[1].img_src }}" alt="{{ project[1].img_alt }}"></a>
       </li>
     {% endfor %}
   </ul>

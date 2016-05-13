@@ -1,0 +1,32 @@
+{
+  "rhodes-quality": {
+    "img_src": "images/portfolio/rhodesquality-thumb.jpg",
+    "img_alt": "Rhodes Quality",
+    "url": "http://www.rhodesquality.com"
+  },
+  "jet": {
+    "img_src": "images/portfolio/jet-thumb.jpg",
+    "img_alt": "Jet Online",
+    "url": "http://www.jetonline.co.za"
+  },
+  "pegasus-toys": {
+    "img_src": "images/portfolio/pegasustoys-thumb.jpg",
+    "img_alt": "Pegasus Toys",
+    "url": "http://staging.pegasustoys.co.za"
+  },
+  "inside-guide": {
+    "img_src": "images/portfolio/insideguide-thumb.jpg",
+    "img_alt": "Inside Guide",
+    "url": "http://www.insideguide.co.za"
+  },
+  "cahf": {
+    "img_src": "images/portfolio/cahf-thumb.jpg",
+    "img_alt": "Center for Affordable Housing Africa",
+    "url": "http://www.housingfinanceafrica.org"
+  },
+  "merrypak": {
+    "img_src": "images/portfolio/merrypak-thumb.jpg",
+    "img_alt": "Merrypak",
+    "url": "http://www.merrypak.co.za"
+  }
+}
