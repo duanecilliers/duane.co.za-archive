@@ -8,7 +8,9 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-
+* {
+  box-sizing: border-box;
+}
 
 /**
  * Basic styling
@@ -155,6 +157,26 @@ pre {
       font-family: $heading-font-family-alt;
       font-weight: 400;
       margin-bottom: $spacing-unit * 1.5;
+    }
+  }
+}
+
+/**
+ * Components
+ */
+#bio {
+  > div {
+    display: table;
+
+    .info {
+      width: 70%;
+      padding-left: $spacing-unit;
+    }
+
+    img,
+    .info {
+      display: table-cell;
+      vertical-align: middle;
     }
   }
 }
