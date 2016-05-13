@@ -21,3 +21,4 @@ markdown: kramdown
 sass:
   load_paths:
     - bower_components
+  style: compressed
