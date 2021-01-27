@@ -1,6 +1,6 @@
 import { Canvas } from 'react-three-fiber'
 import { Perf } from 'r3f-perf'
-import useStore from '@/helpers/store'
+import useStore from '@helpers/store'
 import { OrbitControls } from '@react-three/drei'
 import { a, useSpring } from '@react-spring/three'
 import { EffectComposer, Vignette } from '@react-three/postprocessing'

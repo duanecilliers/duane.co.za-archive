@@ -1,8 +1,8 @@
-import useStore from '@/helpers/store'
+import useStore from '@helpers/store'
 import dynamic from 'next/dynamic'
-import BackButton from '@/components/dom/back'
+import BackButton from '@components/dom/back'
 
-const Box = dynamic(() => import('@/components/canvas/Box'), {
+const Box = dynamic(() => import('@components/canvas/Box'), {
   ssr: false,
 })
 

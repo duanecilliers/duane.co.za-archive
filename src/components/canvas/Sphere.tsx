@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import { Environment, MeshDistortMaterial, Sphere } from '@react-three/drei'
 import { a, useSpring } from '@react-spring/three'
-import useStore from '@/helpers/store'
+import useStore from '@helpers/store'
 
 const M = a(MeshDistortMaterial)
 

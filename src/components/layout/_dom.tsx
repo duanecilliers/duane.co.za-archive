@@ -1,4 +1,4 @@
-import useStore from '@/helpers/store'
+import useStore from '@helpers/store'
 import { Badge } from '@pmndrs/branding'
 import Head from 'next/head'
 

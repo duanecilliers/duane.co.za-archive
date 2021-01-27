@@ -1,8 +1,8 @@
-import useStore from '@/helpers/store'
+import useStore from '@helpers/store'
 import dynamic from 'next/dynamic'
-import Go from '@/components/dom/go'
+import Go from '@components/dom/go'
 
-const Sphere = dynamic(() => import('@/components/canvas/Sphere'), {
+const Sphere = dynamic(() => import('@components/canvas/Sphere'), {
   ssr: false,
 })
 

@@ -3,7 +3,7 @@ import { Environment, MeshDistortMaterial } from '@react-three/drei'
 import { a, useSpring } from '@react-spring/three'
 import { RoundedBoxBufferGeometry } from 'three/examples/jsm/geometries/RoundedBoxBufferGeometry'
 import { extend } from 'react-three-fiber'
-import useStore from '@/helpers/store'
+import useStore from '@helpers/store'
 
 const M = a(MeshDistortMaterial)
 extend({ RoundedBoxBufferGeometry })
