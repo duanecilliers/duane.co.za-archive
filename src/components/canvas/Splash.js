@@ -4,7 +4,7 @@ import { range } from 'ramda'
 import React, { useRef } from 'react'
 import { Suspense } from 'react-is'
 import { useFrame } from 'react-three-fiber'
-import { a } from 'react-spring/three'
+import { a, useSpring } from 'react-spring/three'
 import Domine from '../../../public/fonts/Domine_Bold.json'
 import Roboto from '../../../public/fonts/Roboto_Regular.json'
 
@@ -80,20 +80,31 @@ const Splash = ({ color }) => {
         <ObjectMesh key={i} position={obj.position} color={color} />
       ))
 
+  const groupSpring = useSpring({
+    from: {
+      scale: [0, 0, 0],
+    },
+    to: {
+      scale: [1, 1, 1],
+    },
+  })
+
   return (
     <Suspense fallback={null}>
-      <ambientLight intensity={0.5} />
-      {/* <textBufferGeometry>Testing</textBufferGeometry> */}
-      <Center position={[0, 0.25, 0]}>
-        <Heading />
-      </Center>
-      <Center position={[0, -0.25, 0]}>
-        <SubHeading />
-      </Center>
-      <a.group ref={group}>
-        <Objects />
+      <a.group {...groupSpring}>
+        <ambientLight intensity={0.5} />
+        {/* <textBufferGeometry>Testing</textBufferGeometry> */}
+        <Center position={[0, 0.25, 0]}>
+          <Heading />
+        </Center>
+        <Center position={[0, -0.25, 0]}>
+          <SubHeading />
+        </Center>
+        <a.group ref={group}>
+          <Objects />
+        </a.group>
+        <Environment preset={'studio'} />
       </a.group>
-      <Environment preset={'studio'} />
     </Suspense>
   )
 }

@@ -3,6 +3,7 @@ import { Environment, Sphere } from '@react-three/drei'
 import { Physics, useBox, usePlane } from '@react-three/cannon'
 import create from 'zustand'
 import { useFrame } from 'react-three-fiber'
+import useBgStore from '@/state/useBgStore'
 
 const useCollissionStore = create((set) => ({
   collissions: 0,
@@ -27,6 +28,7 @@ const PhysicsSphere = ({ onAnimationComplete, ...props }) => {
   const [colorIndex, setColorIndex] = useState(0)
   const collissions = useCollissionStore((state) => state.collissions)
   const increment = useCollissionStore((state) => state.increment)
+  const setBg = useBgStore((s) => s.setBg)
 
   useEffect(() => {
     // const randomColor = Math.floor(Math.random() * colors.length)
@@ -46,7 +48,8 @@ const PhysicsSphere = ({ onAnimationComplete, ...props }) => {
   }))
 
   useFrame(() => {
-    if (ref.current.position.z > 3.9) {
+    if (ref.current.position.z > 3.8) {
+      setBg(colors[colorIndex])
       onAnimationComplete(colors[colorIndex])
     }
   })
