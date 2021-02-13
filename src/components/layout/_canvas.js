@@ -1,19 +1,20 @@
 import { Canvas } from 'react-three-fiber'
 import { Perf } from 'r3f-perf'
-import useStore from '@/helpers/store'
+import * as THREE from 'three'
+import useStore from '@/state/store'
 import { Preload } from '@react-three/drei'
-import { a, useSpring } from '@react-spring/three'
+import { a } from '@react-spring/three'
 import { EffectComposer, Vignette } from '@react-three/postprocessing'
+import useBgStore from '@/state/useBgStore'
 // enable shader editor
 // import { MaterialEditor, useEditorComposer } from '@three-material-editor/react'
 
 const Bg = () => {
-  const router = useStore((state) => state.router)
-  const { bg } = useSpring({
-    bg: router && router.route !== '/box' ? 0 : 0x17 / 255,
-  })
-  return <a.color attach='background' r={bg} g={bg} b={bg} />
+  const bg = useBgStore((state) => state.bg)
+  const color = new THREE.Color(bg)
+  return <color attach='background' r={color.r} g={color.g} b={color.b} />
 }
+
 const LCanvas = ({ children }) => {
   return (
     <Canvas

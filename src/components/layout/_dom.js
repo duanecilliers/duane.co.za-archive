@@ -1,4 +1,4 @@
-import useStore from '@/helpers/store'
+import useStore from '@/state/store'
 import Head from 'next/head'
 
 const Header = () => {

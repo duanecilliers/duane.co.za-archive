@@ -1,6 +1,5 @@
 import { Suspense, useEffect, useMemo, useState } from 'react'
 import { Environment, Sphere } from '@react-three/drei'
-import useStore from '@/helpers/store'
 import { Physics, useBox, usePlane } from '@react-three/cannon'
 import create from 'zustand'
 import { useFrame } from 'react-three-fiber'
@@ -22,7 +21,7 @@ const Plane = (props) => {
   )
 }
 
-const PhysicsSphere = ({ router, ...props }) => {
+const PhysicsSphere = ({ onAnimationComplete, ...props }) => {
   const colors = useMemo(
     () => ['#F25E7A', '#7C3F8C', '#AD6BBF', '#F2CB05', '#F2695C'],
     []
@@ -48,25 +47,18 @@ const PhysicsSphere = ({ router, ...props }) => {
 
   useFrame(() => {
     if (ref.current.position.z > 4) {
-      router.push('box')
+      onAnimationComplete(color)
     }
   })
 
   return (
-    <Sphere
-      ref={ref}
-      args={[1, 32, 32]}
-      onClick={() => {
-        router.push(`/box`)
-      }}
-    >
+    <Sphere ref={ref} args={[1, 32, 32]}>
       <meshToonMaterial color={color} />
     </Sphere>
   )
 }
 
-const SphereComponent = () => {
-  const router = useStore((s) => s.router)
+const Intro = ({ onAnimationComplete }) => {
   return (
     <Suspense fallback={null}>
       <ambientLight intensity={0.5} />
@@ -82,7 +74,7 @@ const SphereComponent = () => {
           frictionEquationRelaxation: 2,
         }}
       >
-        <PhysicsSphere router={router} />
+        <PhysicsSphere onAnimationComplete={onAnimationComplete} />
         <Plane />
       </Physics>
       <Environment preset={'studio'} />
@@ -90,4 +82,4 @@ const SphereComponent = () => {
   )
 }
 
-export default SphereComponent
+export default Intro
