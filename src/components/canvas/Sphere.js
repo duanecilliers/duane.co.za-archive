@@ -32,10 +32,8 @@ const PhysicsSphere = ({ router, ...props }) => {
   const increment = useCollissionStore((state) => state.increment)
 
   useEffect(() => {
-    if (collissions % 4 === 0) {
-      const randomColor = Math.floor(Math.random() * colors.length)
-      setColor(colors[randomColor])
-    }
+    const randomColor = Math.floor(Math.random() * colors.length)
+    setColor(colors[randomColor])
   }, [collissions, colors])
 
   const [ref] = useBox(() => ({
