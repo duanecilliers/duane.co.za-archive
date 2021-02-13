@@ -1,8 +1,10 @@
 import { Environment, OrbitControls, Sphere } from '@react-three/drei'
+// import * as THREE from 'three'
 import { range } from 'ramda'
 import React, { useRef } from 'react'
 import { Suspense } from 'react-is'
 import { useFrame } from 'react-three-fiber'
+import { a } from 'react-spring/three'
 
 const PlaceHolderMesh = ({
   args = [0.1, 32, 32],
@@ -16,16 +18,19 @@ const PlaceHolderMesh = ({
 }
 
 const Splash = ({ color }) => {
-  const objectsRef = useRef()
+  const group = useRef()
 
-  // useFrame((time) => {
-  //   objectsRef.rotation.x = objectsRef.rotation.x * time
-  // })
+  useFrame(({ clock }) => {
+    const elapsedTime = clock.getElapsedTime()
+    const rotation = Math.PI * elapsedTime * 0.025
+    group.current.rotation.x = rotation
+    group.current.rotation.y = rotation
+  })
 
-  const randomPoint = () => (Math.random() - 0.5) * 5
+  const randomPoint = () => (Math.random() - 0.5) * 10
 
   const Objects = () =>
-    range(0, 20)
+    range(0, 100)
       .map(() => ({
         position: [randomPoint(), randomPoint(), randomPoint()],
       }))
@@ -38,10 +43,10 @@ const Splash = ({ color }) => {
       <Sphere args={[1, 32, 32]}>
         <meshToonMaterial color={color} />
       </Sphere>
-      <Objects />
-      <group ref={objectsRef}>
-        <Environment preset={'studio'} />
-      </group>
+      <a.group ref={group}>
+        <Objects />
+      </a.group>
+      <Environment preset={'studio'} />
       <OrbitControls />
     </Suspense>
   )
