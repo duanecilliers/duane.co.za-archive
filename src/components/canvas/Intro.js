@@ -46,7 +46,7 @@ const PhysicsSphere = ({ onAnimationComplete, ...props }) => {
   }))
 
   useFrame(() => {
-    if (ref.current.position.z > 4) {
+    if (ref.current.position.z > 3.9) {
       onAnimationComplete(colors[colorIndex])
     }
   })
