@@ -16,7 +16,13 @@ const ObjectMesh = ({
   color,
 }) => {
   return (
-    <Sphere args={args} position={position}>
+    <Sphere
+      args={args}
+      position={position}
+      onPointerOver={() => {
+        console.log('over')
+      }}
+    >
       <meshToonMaterial attach='material' color={color} />
     </Sphere>
   )

@@ -4,6 +4,7 @@ import { Physics, useBox, usePlane } from '@react-three/cannon'
 import create from 'zustand'
 import { useFrame } from 'react-three-fiber'
 import useBgStore from '@/state/useBgStore'
+import { colors } from '@/constants'
 
 const useCollissionStore = create((set) => ({
   collissions: 0,
@@ -21,8 +22,6 @@ const Plane = (props) => {
     </mesh>
   )
 }
-
-const colors = ['#F2695C', '#7C3F8C', '#AD6BBF', '#F2CB05', '#F25E7A']
 
 const PhysicsSphere = ({ onAnimationComplete, ...props }) => {
   const [colorIndex, setColorIndex] = useState(0)
@@ -49,7 +48,6 @@ const PhysicsSphere = ({ onAnimationComplete, ...props }) => {
 
   useFrame(() => {
     if (ref.current.position.z > 3.8) {
-      setBg(colors[colorIndex])
       onAnimationComplete(colors[colorIndex])
     }
   })

@@ -1,10 +1,9 @@
 import { Canvas } from 'react-three-fiber'
-import { Perf } from 'r3f-perf'
+// import { Perf } from 'r3f-perf'
 import * as THREE from 'three'
 import useStore from '@/state/store'
 import { Preload } from '@react-three/drei'
-import { a } from '@react-spring/three'
-import { EffectComposer, Vignette } from '@react-three/postprocessing'
+// import { a } from '@react-spring/three'
 import useBgStore from '@/state/useBgStore'
 // enable shader editor
 // import { MaterialEditor, useEditorComposer } from '@three-material-editor/react'
@@ -31,9 +30,6 @@ const LCanvas = ({ children }) => {
       {/* <Perf openByDefault trackGPU={true} position={'bottom-right'} /> */}
       {/* <MaterialEditor /> */}
       {/* <EffectComposer ref={useEditorComposer()}> */}
-      <EffectComposer>
-        <Vignette eskil={false} offset={0.1} darkness={0.8} />
-      </EffectComposer>
       {children}
     </Canvas>
   )

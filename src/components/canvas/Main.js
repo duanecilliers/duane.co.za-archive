@@ -6,7 +6,7 @@ import Splash from './Splash'
 const Main = () => {
   const [introAnimationComplete, setIntroAnimationComplete] = useState(false)
   const [color, setColor] = useState('#F25E7A')
-  const setBg = useBgStore((s) => s.setBg)
+  // const setBg = useBgStore((s) => s.setBg)
 
   return (
     <>
@@ -17,7 +17,7 @@ const Main = () => {
           onAnimationComplete={(color) => {
             setIntroAnimationComplete(true)
             setColor(color)
-            setBg(color)
+            // setBg(color)
           }}
         />
       )}
