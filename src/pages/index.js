@@ -6,7 +6,7 @@ const Main = dynamic(() => import('@/components/canvas/Main'), {
 })
 
 const Page = () => {
-  useStore.setState({ title: 'Main' })
+  useStore.setState({ title: 'Duane Cilliers' })
   return (
     <>
       <Main r3f />

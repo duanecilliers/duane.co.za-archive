@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useMemo, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { Environment, Sphere } from '@react-three/drei'
 import { Physics, useBox, usePlane } from '@react-three/cannon'
 import create from 'zustand'
@@ -21,19 +21,19 @@ const Plane = (props) => {
   )
 }
 
+const colors = ['#F2695C', '#7C3F8C', '#AD6BBF', '#F2CB05', '#F25E7A']
+
 const PhysicsSphere = ({ onAnimationComplete, ...props }) => {
-  const colors = useMemo(
-    () => ['#F25E7A', '#7C3F8C', '#AD6BBF', '#F2CB05', '#F2695C'],
-    []
-  )
-  const [color, setColor] = useState(colors[0])
+  const [colorIndex, setColorIndex] = useState(0)
   const collissions = useCollissionStore((state) => state.collissions)
   const increment = useCollissionStore((state) => state.increment)
 
   useEffect(() => {
-    const randomColor = Math.floor(Math.random() * colors.length)
-    setColor(colors[randomColor])
-  }, [collissions, colors])
+    // const randomColor = Math.floor(Math.random() * colors.length)
+    const nextColorIndex = colorIndex > colors.length ? 0 : colorIndex + 1
+    setColorIndex(nextColorIndex)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [collissions])
 
   const [ref] = useBox(() => ({
     mass: 10,
@@ -47,13 +47,13 @@ const PhysicsSphere = ({ onAnimationComplete, ...props }) => {
 
   useFrame(() => {
     if (ref.current.position.z > 4) {
-      onAnimationComplete(color)
+      onAnimationComplete(colors[colorIndex])
     }
   })
 
   return (
     <Sphere ref={ref} args={[1, 32, 32]}>
-      <meshToonMaterial color={color} />
+      <meshToonMaterial color={colors[colorIndex]} />
     </Sphere>
   )
 }
