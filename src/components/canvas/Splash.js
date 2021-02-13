@@ -1,26 +1,25 @@
 import { Center, Environment, Sphere } from '@react-three/drei'
 import * as THREE from 'three'
 import { range } from 'ramda'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Suspense } from 'react-is'
 import { useFrame } from 'react-three-fiber'
 import { a, useSpring } from 'react-spring/three'
 import Domine from '../../../public/fonts/Domine_Bold.json'
 import Roboto from '../../../public/fonts/Roboto_Regular.json'
+import { colors } from '@/constants'
 
 const fontLoader = new THREE.FontLoader()
 
-const ObjectMesh = ({
-  args = [Math.random() * 0.1, 32, 32],
-  position = [-0.5, 0, 0.5],
-  color,
-}) => {
+const ObjectMesh = ({ args, position = [-0.5, 0, 0.5], ...props }) => {
+  const [color, setColor] = useState(props.color)
+
   return (
     <Sphere
       args={args}
       position={position}
       onPointerOver={() => {
-        console.log('over')
+        setColor(colors[Math.floor(Math.random() * colors.length)])
       }}
     >
       <meshToonMaterial attach='material' color={color} />
@@ -83,7 +82,12 @@ const Splash = ({ color }) => {
         position: [randomPoint(), randomPoint(), randomPoint()],
       }))
       .map((obj, i) => (
-        <ObjectMesh key={i} position={obj.position} color={color} />
+        <ObjectMesh
+          key={i}
+          args={[Math.random() * 0.1, 32, 32]}
+          position={obj.position}
+          color={color}
+        />
       ))
 
   const groupSpring = useSpring({

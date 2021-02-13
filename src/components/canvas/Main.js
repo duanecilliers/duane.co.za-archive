@@ -1,4 +1,4 @@
-import useBgStore from '@/state/useBgStore'
+// import useBgStore from '@/state/useBgStore'
 import React, { useState } from 'react'
 import Intro from './Intro'
 import Splash from './Splash'
