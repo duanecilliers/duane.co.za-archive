@@ -11,6 +11,8 @@ import { colors } from '@/constants'
 
 const fontLoader = new THREE.FontLoader()
 
+const randomColor = () => colors[Math.floor(Math.random() * colors.length)]
+
 const ObjectMesh = ({ args, position = [-0.5, 0, 0.5], ...props }) => {
   const [color, setColor] = useState(props.color)
 
@@ -19,7 +21,7 @@ const ObjectMesh = ({ args, position = [-0.5, 0, 0.5], ...props }) => {
       args={args}
       position={position}
       onPointerOver={() => {
-        setColor(colors[Math.floor(Math.random() * colors.length)])
+        setColor(randomColor())
       }}
     >
       <meshToonMaterial attach='material' color={color} />
@@ -86,7 +88,7 @@ const Splash = ({ color }) => {
           key={i}
           args={[Math.random() * 0.1, 32, 32]}
           position={obj.position}
-          color={color}
+          color={randomColor()}
         />
       ))
 
