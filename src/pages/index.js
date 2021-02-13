@@ -11,7 +11,6 @@ const Page = () => {
   return (
     <>
       <Sphere r3f />
-      <Go />
     </>
   )
 }
