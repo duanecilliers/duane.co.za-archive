@@ -1,4 +1,4 @@
-import { Center, Environment, OrbitControls, Sphere } from '@react-three/drei'
+import { Center, Environment, Sphere } from '@react-three/drei'
 import * as THREE from 'three'
 import { range } from 'ramda'
 import React, { useRef } from 'react'
@@ -90,14 +90,10 @@ const Splash = ({ color }) => {
       <Center position={[0, -0.25, 0]}>
         <SubHeading />
       </Center>
-      {/* <Sphere args={[1, 32, 32]}>
-        <meshToonMaterial color={color} />
-      </Sphere> */}
       <a.group ref={group}>
         <Objects />
       </a.group>
       <Environment preset={'studio'} />
-      <OrbitControls />
     </Suspense>
   )
 }
