@@ -28,7 +28,7 @@ const LCanvas = ({ children }) => {
     >
       <Preload all />
       <Bg />
-      <Perf openByDefault trackGPU={true} position={'bottom-right'} />
+      {/* <Perf openByDefault trackGPU={true} position={'bottom-right'} /> */}
       {/* <MaterialEditor /> */}
       {/* <EffectComposer ref={useEditorComposer()}> */}
       <EffectComposer>
