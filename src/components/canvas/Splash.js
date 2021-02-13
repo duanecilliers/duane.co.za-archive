@@ -1,4 +1,4 @@
-import { Center, Environment, Sphere } from '@react-three/drei'
+import { Center, Environment, Sphere, Stars } from '@react-three/drei'
 import * as THREE from 'three'
 import { range } from 'ramda'
 import React, { useRef, useState } from 'react'
@@ -115,6 +115,7 @@ const Splash = ({ color }) => {
         </a.group>
         <Environment preset={'studio'} />
       </a.group>
+      <Stars factor={0.1} />
     </Suspense>
   )
 }
