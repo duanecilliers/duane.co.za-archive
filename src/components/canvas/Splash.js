@@ -118,6 +118,7 @@ const Splash = ({ color }) => {
         <Environment preset={'studio'} />
       </a.group>
       <Stars factor={0.1} />
+      <directionalLight position={[-1, 0, 1]} intensity={0.7} />
     </Suspense>
   )
 }

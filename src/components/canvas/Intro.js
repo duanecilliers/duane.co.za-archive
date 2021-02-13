@@ -79,6 +79,7 @@ const Intro = ({ onAnimationComplete }) => {
         <Plane />
       </Physics>
       <Environment preset={'studio'} />
+      <directionalLight position={[-1, 0, 1]} intensity={0.7} />
     </Suspense>
   )
 }
