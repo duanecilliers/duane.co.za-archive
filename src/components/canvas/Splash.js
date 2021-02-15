@@ -1,4 +1,10 @@
-import { Center, Environment, Sphere, Stars } from '@react-three/drei'
+import {
+  Center,
+  Environment,
+  OrbitControls,
+  Sphere,
+  Stars,
+} from '@react-three/drei'
 import * as THREE from 'three'
 import { range } from 'ramda'
 import React, { useRef, useState } from 'react'
@@ -59,7 +65,7 @@ const SubHeading = () => {
     <mesh>
       <textGeometry
         attach='geometry'
-        args={['Front-end developer & aspiring creative developer', textOpts]}
+        args={['Front-end engineer & creative developer hobbyist', textOpts]}
       />
       <meshStandardMaterial attach='material' />
     </mesh>
@@ -119,6 +125,7 @@ const Splash = ({ color }) => {
       </a.group>
       <Stars factor={0.1} />
       <directionalLight position={[-1, 0, 1]} intensity={0.7} />
+      <OrbitControls />
     </Suspense>
   )
 }
