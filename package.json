@@ -45,7 +45,7 @@
     "react-three-fiber": "^5.3.18",
     "react-use": "^17.1.1",
     "tailwindcss": "^2.0.2",
-    "three": "0.124.0",
+    "three": "0.137.0",
     "webpack": "^5.19.0",
     "zustand": "^3.3.1"
   },
